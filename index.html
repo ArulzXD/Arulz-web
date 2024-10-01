@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toko Online</title>
+    <title>Toko Mewah Saya</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
@@ -33,14 +33,39 @@
 
         /* Header Styling */
         header {
-            background: linear-gradient(to right, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0));
+            background: linear-gradient(to right, rgba(142, 45, 226, 0.8), rgba(74, 0, 224, 0.8));
             padding: 20px;
             text-align: center;
             color: #fff;
             position: relative;
         }
-        header h1 {
+
+        /* Animasi Ketik Selamat Datang */
+        #header-typing {
             font-size: 3rem;
+            color: #fff;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 3px solid;
+            animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink-caret {
+            from, to {
+                border-color: transparent;
+            }
+            50% {
+                border-color: #fff;
+            }
         }
 
         /* Slider Section */
@@ -69,7 +94,17 @@
             font-size: 2.5rem;
             text-align: center;
             margin-bottom: 20px;
+            animation: colorChange 5s infinite alternate;
         }
+
+        @keyframes colorChange {
+            0% { color: #ff0000; }
+            25% { color: #00ff00; }
+            50% { color: #0000ff; }
+            75% { color: #ffff00; }
+            100% { color: #ff00ff; }
+        }
+
         .produk {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -163,15 +198,20 @@
     <!-- Video Background -->
     <div class="video-background">
         <video autoplay loop muted>
-            <source src="https://pomf2.lain.la/f/chb56lv6.mp4" type="video/mp4">
+            <source src="path/to/your-video.mp4" type="video/mp4">
             Browser Anda tidak mendukung video tag.
         </video>
     </div>
 
     <!-- Header -->
     <header>
-        <h1>Selamat Datang di Toko Mewah Saya</h1>
+        <h1 id="header-typing">Selamat Datang di Toko Mewah Saya</h1>
     </header>
+
+    <!-- Slider Section -->
+    <div class="slider">
+        <img src="https://via.placeholder.com/1200x400" alt="Gambar Promosi">
+    </div>
 
     <!-- Produk Section -->
     <div class="produk-section">
@@ -187,7 +227,7 @@
                     <li>🌐 <strong>8 GB CORE 4 = 50K</strong> (Garansi 15 Hari)</li>
                     <li>🌐 <strong>16 GB CORE 4 = 70K</strong> (Garansi 15 Hari)</li>
                 </ul>
-                <a href="https://wa.me/6283171080910?text=Halo,%20saya%20ingin%20membeli%20VPS" class="beli-button" target="_blank">Beli via WhatsApp</a>
+                <a href="https://wa.me/628123456789?text=Halo,%20saya%20ingin%20membeli%20VPS" class="beli-button" target="_blank">Beli via WhatsApp</a>
             </div>
             <!-- Tambahkan produk lain sesuai kebutuhan -->
         </div>
@@ -217,4 +257,4 @@
         <p>Copyright &copy; 2024 Toko Mewah Saya. Semua Hak Dilindungi.</p>
     </footer>
 </body>
-</html>
+    </html>
