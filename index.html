@@ -66,30 +66,45 @@
         .produk {
             display: flex;
             flex-wrap: wrap;
-            gap: 70px;
+            gap: 40px;
+            justify-content: center;
         }
         .produk-item {
             background: #fff;
-            padding: 100px;
+            padding: 30px;
             border: 1px solid #ddd;
             border-radius: 8px;
-            width: calc(33.33% - 60px);
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            width: calc(33.33% - 40px);
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .produk-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 0 25px rgba(0,0,0,0.3);
         }
         .produk-item img {
             max-width: 100%;
             height: auto;
             border-radius: 8px;
         }
+        .produk-item h3 {
+            font-size: 1.5rem;
+            margin-top: 15px;
+        }
+        .produk-item p {
+            font-size: 1.2rem;
+            margin: 10px 0;
+        }
         .beli-button {
             display: inline-block;
-            padding: 10px 20px;
+            padding: 15px 25px;
             background-color: #25d366;
             color: white;
             text-align: center;
             border-radius: 5px;
             text-decoration: none;
-            margin-top: 10px;
+            margin-top: 15px;
+            font-size: 1.1rem;
         }
         .beli-button:hover {
             background-color: #1ebc59;
@@ -104,6 +119,8 @@
         .katalog-produk {
             color: #fff;
             text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
         }
     </style>
 </head>
@@ -115,49 +132,19 @@
         <h2 class="katalog-produk">Katalog Produk</h2>
         <div class="produk">
             <div class="produk-item">
-                <img src="https://via.placeholder.com/150" alt="Produk 1">
-                <h3>Produk 1
-VPS RAM 16 C4 50K
-VPS RAM 8 C4 40K
-*VPS RAM 8 C2 30K
-*VPS RAM 4 C2 25K
-*VPS RAM 2 C1 20K*
-*VPS RAM 1 C1 15K*
-`KEUNTUNGAN VPS`
-_• Free Script Install Panel/Cpanel_
-_• Free Install Panel Pterodactyl_
-_• Free Req Website Namamu_
-_• Free Install Node & Wings_
-_• Free Egg Bot Wa/Mengkrep_
-_• Free Install Thema Khusus Ram 8-16_
-_• Garansi 20 Hari_ *(2x Replace)*
-_• Vps Aktif 30 Hari_
-* FREE REANAME 1 SC LU
-_• Free Akses Vps JuiceSSH_
-  • _FREE SC PRIBADI ZALL_
-
-_KOK MAHAL BANG ?? BOLEH NEGO ASAL NGOTAK_
-
-*PANEL PRIVAT*
-`OWNER PANEL 25K`
-`PT PANEL 15K`
-`RESELLER PANEL 10K`
-
-*PANEL PUBLIC*
-`OWNER PANEL 15K`
-`PT PANEL 10K`
-`RESELLER PANEL 8K`</h3>
-                <p>Harga: TERTERA</p>
+                <img src="https://via.placeholder.com/300" alt="Produk 1">
+                <h3>Produk 1</h3>
+                <p>Harga: Rp100.000</p>
                 <a href="https://wa.me/6288985189156?text=Halo,%20saya%20ingin%20membeli%20Produk%201" class="beli-button" target="_blank">Beli via WhatsApp</a>
             </div>
             <div class="produk-item">
-                <img src="https://via.placeholder.com/150" alt="Produk 2">
+                <img src="https://via.placeholder.com/300" alt="Produk 2">
                 <h3>Produk 2</h3>
                 <p>Harga: Rp200.000</p>
                 <a href="https://wa.me/6288985189156?text=Halo,%20saya%20ingin%20membeli%20Produk%202" class="beli-button" target="_blank">Beli via WhatsApp</a>
             </div>
             <div class="produk-item">
-                <img src="https://via.placeholder.com/150" alt="Produk 3">
+                <img src="https://via.placeholder.com/300" alt="Produk 3">
                 <h3>Produk 3</h3>
                 <p>Harga: Rp300.000</p>
                 <a href="https://wa.me/6288985189156?text=Halo,%20saya%20ingin%20membeli%20Produk%203" class="beli-button" target="_blank">Beli via WhatsApp</a>
