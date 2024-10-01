@@ -50,10 +50,9 @@
             margin-bottom: 20px;
         }
         .produk {
-          display: flex;
-          flex-wrap: wrap;
-          gap: 20px;
-          justify-content: space-between;
+           display: grid;
+           row-gap: 60px;    /* Jarak antar baris */
+           column-gap: 15px; /* Jarak antar kolom */
         }
 
         @media (max-width: 768px) {
@@ -62,7 +61,7 @@
           }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 668px) {
         .produk-item {
         width: 100%; /* Satu produk per baris pada layar yang lebih kecil */
           }
