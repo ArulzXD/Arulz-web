@@ -21,16 +21,29 @@
             padding: 1rem;
             text-align: center;
         }
-        .animasi-tulisan {
+        .typing-animation {
             font-size: 2.5rem;
-            animation: teks-berkedip 1.5s infinite alternate;
+            color: #fff;
+            border-right: 3px solid #fff;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+            animation: typing 4s steps(30, end) 1s 1 normal both, blink 0.75s step-end infinite;
         }
-        @keyframes teks-berkedip {
-            0% {
-                opacity: 1;
+        @keyframes typing {
+            from {
+                width: 0;
             }
-            100% {
-                opacity: 0.3;
+            to {
+                width: 100%;
+            }
+        }
+        @keyframes blink {
+            from, to {
+                border-color: transparent;
+            }
+            50% {
+                border-color: #fff;
             }
         }
         .container {
@@ -78,15 +91,18 @@
             text-align: center;
             margin-top: 20px;
         }
+        .katalog-produk {
+            color: #fff;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
     <header>
-        <h1 class="animasi-tulisan">Selamat Datang di Toko Online Saya</h1>
+        <h1 class="typing-animation">Selamat Datang di Toko Online Saya</h1>
     </header>
-    <div class="animasi-tulisan">
-        <h2>Katalog Produk</h2>
-    </header>
+    <div class="container">
+        <h2 class="katalog-produk">Katalog Produk</h2>
         <div class="produk">
             <div class="produk-item">
                 <img src="https://via.placeholder.com/150" alt="Produk 1">
