@@ -52,16 +52,16 @@
         .produk {
            display: grid;
            row-gap: 100px;    /* Jarak antar baris */
-           column-gap: 15px; /* Jarak antar kolom */
+           column-gap: 100px; /* Jarak antar kolom */
         }
 
         @media (max-width: 768px) {
        .produk-item {
-        width: calc(50% - 20px); /* Dua produk per baris untuk layar lebih kecil */
+        width: calc(50% - 30px); /* Dua produk per baris untuk layar lebih kecil */
           }
         }
 
-        @media (max-width: 668px) {
+        @media (max-width: 568px) {
         .produk-item {
         width: 100%; /* Satu produk per baris pada layar yang lebih kecil */
           }
