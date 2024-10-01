@@ -3,156 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toko Online Saya</title>
+    <title>Toko Mewah Saya</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url('https://api.shannmoderz.xyz/server/file/U1TmrbNTwlbQGR7B.jpg');
-            background-size: cover;
-            background-attachment: fixed;
-            background-position: center;
+            background: #f0f0f0;
+            color: #333;
         }
+
+        /* Header Styling */
         header {
-            background-color: rgba(0, 0, 0, 0.0);
-            color: #fff;
-            padding: 1rem;
-            text-align: center;
-        }
-        .typing-animation {
-            font-size: 2rem;
-            color: #fff;
-            border-right: 3px solid #fff;
-            white-space: nowrap;
-            overflow: hidden;
-            width: 0;
-            animation: typing 4s steps(30, end) 1s infinite normal both, blink 0.75s step-end infinite, color-change 5s infinite;
-        }
-        @keyframes typing {
-            0% {
-                width: 0;
-            }
-            50% {
-                width: 100%;
-            }
-            100% {
-                width: 0;
-            }
-        }
-        @keyframes blink {
-            from, to {
-                border-color: transparent;
-            }
-            50% {
-                border-color: #fff;
-            }
-        }
-        @keyframes color-change {
-            0% { color: #ff0000; }
-            25% { color: #00ff00; }
-            50% { color: #0000ff; }
-            75% { color: #ffff00; }
-            100% { color: #ff0000; }
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
+            background: linear-gradient(to right, #8e2de2, #4a00e0);
             padding: 20px;
-            background-color: rgba(255, 255, 255, 0.0);
-            border-radius: 10px;
+            text-align: center;
+            color: #fff;
+        }
+        header h1 {
+            font-size: 3rem;
+        }
+
+        /* Slider Section */
+        .slider {
+            position: relative;
+            max-width: 100%;
+            height: 400px;
+            overflow: hidden;
+        }
+        .slider img {
+            width: 100%;
+            height: auto;
+            border-bottom: 5px solid #fff;
+        }
+
+        /* Product Section */
+        .produk-section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .produk-section h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 20px;
         }
         .produk {
             display: flex;
             flex-wrap: wrap;
-            gap: 40px;
+            gap: 30px;
             justify-content: space-between;
         }
         .produk-item {
             background: #fff;
-            padding: 30px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            width: calc(33.33% - 40px);
-            box-shadow: 0 0 15px rgba(0,0,0,0.2);
-            transition: transform 0.3s, box-shadow 0.3s;
+            width: calc(33.33% - 20px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
         }
         .produk-item:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 0 25px rgba(0,0,0,0.3);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
         .produk-item img {
             max-width: 100%;
-            height: auto;
-            border-radius: 8px;
+            border-bottom: 1px solid #ddd;
         }
         .produk-item h3 {
             font-size: 1.5rem;
-            margin-top: 15px;
+            padding: 15px;
+            margin: 0;
         }
         .produk-item p {
-            font-size: 1.2rem;
-            margin: 10px 0;
+            padding: 0 15px 15px;
         }
         .beli-button {
-            display: inline-block;
-            padding: 15px 25px;
-            background-color: #25d366;
-            color: white;
+            display: block;
+            padding: 15px;
+            margin: 0 15px 15px;
             text-align: center;
-            border-radius: 5px;
+            background-color: #8e2de2;
+            color: white;
             text-decoration: none;
-            margin-top: 15px;
-            font-size: 1.1rem;
+            border-radius: 5px;
+            transition: background 0.3s ease-in-out;
         }
         .beli-button:hover {
-            background-color: #1ebc59;
+            background-color: #6b10bf;
         }
-        footer {
-            background-color: rgba(0, 0, 0, 0.0);
-            color: #fff;
-            padding: 1rem;
-            text-align: center;
-            margin-top: 20px;
+
+        /* Testimonial Section */
+        .testimonial-section {
+            background: #f7f7f7;
+            padding: 40px 20px;
         }
-        .katalog-produk {
-            color: #fff;
+        .testimonial-section h2 {
+            font-size: 2.5rem;
             text-align: center;
-            font-size: 2rem;
             margin-bottom: 20px;
+        }
+        .testimonial {
+            display: flex;
+            gap: 20px;
+            justify-content: space-around;
+        }
+        .testimonial-item {
+            background: #fff;
+            width: 30%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .testimonial-item p {
+            font-style: italic;
+        }
+        .testimonial-item span {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        /* Footer Section */
+        footer {
+            background: #4a00e0;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        footer p {
+            margin: 0;
         }
     </style>
 </head>
 <body>
+    <!-- Header -->
     <header>
-        <h1 class="typing-animation">Selamat Datang di Toko Online Saya</h1>
+        <h1>Selamat Datang di Toko Mewah Saya</h1>
     </header>
-    <div class="container">
-        <h2 class="katalog-produk">Katalog Produk</h2>
+
+    <!-- Slider Section -->
+    <div class="slider">
+        <img src="https://via.placeholder.com/1200x400" alt="Gambar Promosi">
+    </div>
+
+    <!-- Produk Section -->
+    <div class="produk-section">
+        <h2>Katalog Produk Unggulan</h2>
         <div class="produk">
             <div class="produk-item">
-                <img src="https://via.placeholder.com/300" alt="Produk 1">
+                <img src="https://via.placeholder.com/350x200" alt="Produk 1">
                 <h3>Produk 1</h3>
-                <p>Harga: Rp100.000</p>
-                <a href="https://wa.me/6288985189156?text=Halo,%20saya%20ingin%20membeli%20Produk%201" class="beli-button" target="_blank">Beli via WhatsApp</a>
+                <p>Harga: Rp500.000</p>
+                <a href="https://wa.me/628123456789?text=Halo,%20saya%20ingin%20membeli%20Produk%201" class="beli-button" target="_blank">Beli via WhatsApp</a>
             </div>
             <div class="produk-item">
-                <img src="https://via.placeholder.com/300" alt="Produk 2">
+                <img src="https://via.placeholder.com/350x200" alt="Produk 2">
                 <h3>Produk 2</h3>
-                <p>Harga: Rp200.000</p>
-                <a href="https://wa.me/6288985189156?text=Halo,%20saya%20ingin%20membeli%20Produk%202" class="beli-button" target="_blank">Beli via WhatsApp</a>
+                <p>Harga: Rp750.000</p>
+                <a href="https://wa.me/628123456789?text=Halo,%20saya%20ingin%20membeli%20Produk%202" class="beli-button" target="_blank">Beli via WhatsApp</a>
             </div>
             <div class="produk-item">
-                <img src="https://via.placeholder.com/300" alt="Produk 3">
+                <img src="https://via.placeholder.com/350x200" alt="Produk 3">
                 <h3>Produk 3</h3>
-                <p>Harga: Rp300.000</p>
-                <a href="https://wa.me/6288985189156?text=Halo,%20saya%20ingin%20membeli%20Produk%203" class="beli-button" target="_blank">Beli via WhatsApp</a>
+                <p>Harga: Rp1.000.000</p>
+                <a href="https://wa.me/628123456789?text=Halo,%20saya%20ingin%20membeli%20Produk%203" class="beli-button" target="_blank">Beli via WhatsApp</a>
             </div>
         </div>
     </div>
+
+    <!-- Testimonial Section -->
+    <div class="testimonial-section">
+        <h2>Apa Kata Pelanggan Kami?</h2>
+        <div class="testimonial">
+            <div class="testimonial-item">
+                <p>"Produk ini luar biasa! Sangat puas dengan kualitasnya."</p>
+                <span>- John Doe</span>
+            </div>
+            <div class="testimonial-item">
+                <p>"Pelayanan sangat ramah dan produk sesuai dengan deskripsi."</p>
+                <span>- Jane Smith</span>
+            </div>
+            <div class="testimonial-item">
+                <p>"Toko yang terpercaya, produk berkualitas tinggi!"</p>
+                <span>- Ahmad</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Section -->
     <footer>
-        <p>Copyright &copy; 2024 Toko Online Saya. Semua Hak Dilindungi.</p>
+        <p>Copyright &copy; 2024 Toko Mewah Saya. Semua Hak Dilindungi.</p>
     </footer>
 </body>
 </html>
