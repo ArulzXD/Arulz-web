@@ -64,9 +64,10 @@
             border-radius: 10px;
         }
         .produk {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Mengatur jarak antar produk */
+    justify-content: space-between; /* Rapi dengan ruang di antara produk */
 }
         .produk-item {
             background: #fff;
