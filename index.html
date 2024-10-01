@@ -50,21 +50,22 @@
             margin-bottom: 20px;
         }
         .produk {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 30px;
-            justify-content: space-between;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 20px;
+          justify-content: space-between;
         }
+
+        @media (max-width: 768px) {
+       .produk-item {
+        width: calc(50% - 20px); /* Dua produk per baris untuk layar lebih kecil */
+          }
+        }
+
+        @media (max-width: 480px) {
         .produk-item {
-            background: #fff;
-            width: calc(33.33% - 20px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            overflow: hidden;
-            transition: all 0.3s ease-in-out;
-        }
-        .produk-item:hover {
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        width: 100%; /* Satu produk per baris pada layar yang lebih kecil */
+          }
         }
         .produk-item img {
             max-width: 100%;
