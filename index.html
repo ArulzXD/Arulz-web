@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toko Mewah Saya</title>
+    <title>Toko Online</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         body {
@@ -14,12 +14,30 @@
             color: #333;
         }
 
+        /* Video Background */
+        .video-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .video-background video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         /* Header Styling */
         header {
-            background: linear-gradient(to right, #8e2de2, #4a00e0);
+            background: linear-gradient(to right, rgba(142, 45, 226, 0.8), rgba(74, 0, 224, 0.8));
             padding: 20px;
             text-align: center;
             color: #fff;
+            position: relative;
         }
         header h1 {
             font-size: 3rem;
@@ -31,6 +49,7 @@
             max-width: 100%;
             height: 400px;
             overflow: hidden;
+            z-index: 1;
         }
         .slider img {
             width: 100%;
@@ -43,6 +62,8 @@
             max-width: 1200px;
             margin: 40px auto;
             padding: 0 20px;
+            position: relative;
+            z-index: 1;
         }
         .produk-section h2 {
             font-size: 2.5rem;
@@ -50,21 +71,17 @@
             margin-bottom: 20px;
         }
         .produk {
-           display: grid;
-           row-gap: 300px;    /* Jarak antar baris */
-           column-gap: 60px; /* Jarak antar kolom */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
         }
-
-        @media (max-width: 768px) {
-       .produk-item {
-        width: calc(50% - 20px); /* Dua produk per baris untuk layar lebih kecil */
-          }
-        }
-
-        @media (max-width: 600px) {
         .produk-item {
-        width: 100%; /* Satu produk per baris pada layar yang lebih kecil */
-          }
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
         }
         .produk-item img {
             max-width: 100%;
@@ -95,8 +112,10 @@
 
         /* Testimonial Section */
         .testimonial-section {
-            background: #f7f7f7;
+            background: rgba(247, 247, 247, 0.9);
             padding: 40px 20px;
+            position: relative;
+            z-index: 1;
         }
         .testimonial-section h2 {
             font-size: 2.5rem;
@@ -107,6 +126,7 @@
             display: flex;
             gap: 20px;
             justify-content: space-around;
+            flex-wrap: wrap;
         }
         .testimonial-item {
             background: #fff;
@@ -131,6 +151,8 @@
             color: #fff;
             padding: 20px;
             text-align: center;
+            position: relative;
+            z-index: 1;
         }
         footer p {
             margin: 0;
@@ -138,6 +160,14 @@
     </style>
 </head>
 <body>
+    <!-- Video Background -->
+    <div class="video-background">
+        <video autoplay loop muted>
+            <source src="path/to/your-video.mp4" type="video/mp4">
+            Browser Anda tidak mendukung video tag.
+        </video>
+    </div>
+
     <!-- Header -->
     <header>
         <h1>Selamat Datang di Toko Mewah Saya</h1>
@@ -149,39 +179,22 @@
     </div>
 
     <!-- Produk Section -->
-    <div class="produk-item">
-    <img src="https://telegra.ph/file/c2bd71b704393fc69788c.jpg" alt="Produk 1">
-    <h3>List Harga VPS By Arulz-XD⚡ ⚡</h3>
-    <p><strong>LIST VPS DO BY ArulzXD⚡</strong></p>
-    <ul>
-        <li>🌐 <strong>2 GB CORE 2 = 25K</strong> (Garansi 10 Hari)</li>
-        <li>🌐 <strong>4 GB CORE 2 = 35K</strong> (Garansi 10 Hari)</li>
-        <li>🌐 <strong>8 GB CORE 4 = 50K</strong> (Garansi 15 Hari)</li>
-        <li>🌐 <strong>16 GB CORE 4 = 70K</strong> (Garansi 15 Hari)</li>
-    </ul>
-    <p><strong>Keunggulan:</strong></p>
-    <ul>
-        <li>✅ Free Instalasi</li>
-        <li>✅ Free Install Wings</li>
-        <li>✅ Free Egg Bot WhatsApp</li>
-        <li>✅ Free Request Domain</li>
-    </ul>
-    <p><em>•••• Tinggal Pakai ••••</em></p>
-    <p><strong>Masa Aktif:</strong> 20-30 Hari & Garansi 15 Hari (Jika Tidak Melanggar T.O.S)</p>
-    <a href="https://wa.me/628123456789?text=Halo,%20saya%20ingin%20membeli%20Produk%201" class="beli-button" target="_blank">Beli via WhatsApp</a>
-    </div>
+    <div class="produk-section">
+        <h2>Produk Kami</h2>
+        <div class="produk">
             <div class="produk-item">
-                <img src="https://via.placeholder.com/350x200" alt="Produk 2">
-                <h3>Produk 2</h3>
-                <p>Harga: Rp750.000</p>
-                <a href="https://wa.me/628123456789?text=Halo,%20saya%20ingin%20membeli%20Produk%202" class="beli-button" target="_blank">Beli via WhatsApp</a>
+                <img src="https://telegra.ph/file/c2bd71b704393fc69788c.jpg" alt="Produk 1">
+                <h3>List Harga VPS By Arulz-XD⚡ ⚡</h3>
+                <p><strong>LIST VPS DO BY ArulzXD⚡</strong></p>
+                <ul>
+                    <li>🌐 <strong>2 GB CORE 2 = 25K</strong> (Garansi 10 Hari)</li>
+                    <li>🌐 <strong>4 GB CORE 2 = 35K</strong> (Garansi 10 Hari)</li>
+                    <li>🌐 <strong>8 GB CORE 4 = 50K</strong> (Garansi 15 Hari)</li>
+                    <li>🌐 <strong>16 GB CORE 4 = 70K</strong> (Garansi 15 Hari)</li>
+                </ul>
+                <a href="https://wa.me/6283171080910?text=Halo,%20saya%20ingin%20membeli%20VPS" class="beli-button" target="_blank">Beli via WhatsApp</a>
             </div>
-            <div class="produk-item">
-                <img src="https://via.placeholder.com/350x200" alt="Produk 3">
-                <h3>Produk 3</h3>
-                <p>Harga: Rp1.000.000</p>
-                <a href="https://wa.me/628123456789?text=Halo,%20saya%20ingin%20membeli%20Produk%203" class="beli-button" target="_blank">Beli via WhatsApp</a>
-            </div>
+            <!-- Tambahkan produk lain sesuai kebutuhan -->
         </div>
     </div>
 
