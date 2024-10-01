@@ -64,16 +64,15 @@
             border-radius: 10px;
         }
         .produk {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px; /* Mengatur jarak antar produk */
-    justify-content: space-evenly; /* Rapi dengan ruang di antara produk */
-}
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+            }
         .produk-item {
             background: #fff;
             padding: 100px;
             border: 1px solid #ddd;
-            border-radius: 8px;
+            border-radius: 20px;
             width: calc(33.33% - 60px);
             box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
