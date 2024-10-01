@@ -64,23 +64,28 @@
             border-radius: 10px;
         }
         .produk {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-            }
-        .produk-item {
-            background: #fff;
-            padding: 60px;
-            border: 2px solid #ddd;
-            border-radius: 30px;
-            width: calc(33.33% - 30px);
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        .produk-item img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Mengatur jarak antar produk */
+    justify-content: space-between; /* Produk akan tersebar rata dalam satu baris */
+}
+
+.produk-item {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: calc(33.33% - 20px); /* Mengatur lebar produk agar muat dalam tiga kolom */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    flex-grow: 1; /* Produk akan memanfaatkan ruang yang ada secara proporsional */
+    max-width: calc(33.33% - 20px); /* Menghindari produk meluas melebihi batas baris */
+}
+
+.produk-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
         .beli-button {
             display: inline-block;
             padding: 10px 20px;
