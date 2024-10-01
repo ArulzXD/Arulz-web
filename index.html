@@ -21,6 +21,18 @@
             padding: 1rem;
             text-align: center;
         }
+        .animasi-tulisan {
+            font-size: 2.5rem;
+            animation: teks-berkedip 1.5s infinite alternate;
+        }
+        @keyframes teks-berkedip {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0.3;
+            }
+        }
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -70,9 +82,9 @@
 </head>
 <body>
     <header>
-        <h1>Selamat Datang di Toko Online Saya</h1>
+        <h1 class="animasi-tulisan">Selamat Datang di Toko Online Saya</h1>
     </header>
-    <div class="container">
+    <div class="animasi-tulisan">
         <h2>Katalog Produk</h2>
         <div class="produk">
             <div class="produk-item">
@@ -99,4 +111,4 @@
         <p>Copyright &copy; 2024 Toko Online Saya. Semua Hak Dilindungi.</p>
     </footer>
 </body>
-                </html>
+</html>
