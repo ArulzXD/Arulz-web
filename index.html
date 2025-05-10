@@ -1,222 +1,963 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>CloudFast Digital Marketplace</title>
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-    }
-    header, footer {
-      background: #f8f8f8;
-      padding: 20px;
-      text-align: center;
-    }
-    nav ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      background: #333;
-      margin: 0;
-    }
-    nav ul li {
-      margin: 0 15px;
-    }
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      padding: 14px 20px;
-      display: block;
-    }
-    nav ul li a:hover {
-      background: #575757;
-    }
-    section {
-      padding: 40px 20px;
-    }
-    .products {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-    .product {
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      margin: 10px;
-      padding: 15px;
-      width: 200px;
-      text-align: center;
-    }
-    .product img {
-      width: 100%;
-      height: auto;
-    }
-    .price { color: #e60000; font-weight: bold; }
-    .discount { text-decoration: line-through; color: #999; }
-    .cart ul { list-style: none; padding: 0; }
-    input { padding: 8px; margin-bottom: 10px; width: 100%; max-width: 400px; }
-    button {
-      padding: 8px 16px;
-      background: #007bff;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #0056b3;
-    }
-    .notifications {
-      background: #f0f0f0;
-      padding: 10px;
-      font-size: 14px;
-    }
-  </style>
-</head>
-<body>
+<!doctype html>
+<html lang="en">
 
-  <header>
-    <h1>CloudFast Digital Marketplace</h1>
-    <p>Toko Hosting 100% Terpercaya</p>
-  </header>
+<head
+    <!-- Script Crisp Chat -->
+    <script type="text/javascript">
+        window.$crisp=[];
+        window.CRISP_WEBSITE_ID="2cc3fc53-329c-4c6d-a107-5be9957ebf19";
+        (function(){
+            d=document;
+            s=d.createElement("script");
+            s.src="https://client.crisp.chat/l.js";
+            s.async=1;
+            d.getElementsByTagName("head")[0].appendChild(s);
+        })();
+    </script>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="robots" content="index, follow" />
 
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#script-bot">Script Bot</a></li>
-      <li><a href="#website">Website</a></li>
-      <li><a href="#jasa">Jasa</a></li>
-    </ul>
-  </nav>
+      <meta name="description" content="Toko Hosting 100% Terpercaya " />
 
-  <section class="notifications">
-    <marquee behavior="scroll" direction="left">
-      ryza membeli SC BOT AUTOORDER V1.3.0 | ranz membeli SCRIPT WEBSITE STORE | ayu membeli WEBSITE ORDER KUOTA API
-    </marquee>
-  </section>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Catalyst Team Digital Marketplace" />
+    <meta property="og:description" content="Toko Hosting 100% Terpercaya " />
+    <meta property="og:url" content="https://cloudfast.biz.id/" />
+    <meta property="og:site_name" content="Catalyst Team Digital Marketplace" />
+    <meta property="og:image" content="https://cloudfast.biz.id/assets/images/logo/1746336164872.png" />
+    <meta property="og:image:secure_url" content="https://cloudfast.biz.id/assets/images/logo/1746336164872.png" />
 
-  <section id="home">
-    <h2>Selamat Datang di CloudFast</h2>
-    <p>CloudFast menyediakan berbagai layanan digital, script bot, website, dan jasa terpercaya.</p>
-  </section>
-
-  <section id="script-bot">
-    <h2>Produk Script Bot</h2>
-    <div class="products" id="product-list"></div>
-  </section>
-
-  <section id="website">
-    <h2>Layanan Website</h2>
-    <p>Kami menyediakan layanan pembuatan dan penjualan script website untuk toko digital otomatis.</p>
-  </section>
-
-  <section id="jasa">
-    <h2>Jasa Digital</h2>
-    <p>Kami melayani jasa install panel, konfigurasi server, dan bantuan teknis lainnya.</p>
-  </section>
-
-  <section class="cart" id="cart">
-    <h2>Keranjang Belanja</h2>
-    <ul id="cart-items"></ul>
-    <p>Total: Rp. <span id="cart-total">0</span></p>
-  </section>
-
-  <section class="order-form">
-    <h2>Formulir Pemesanan</h2>
-    <form id="order-form">
-      <label for="name">Nama:</label>
-      <input type="text" id="name" required>
-      <label for="email">Email:</label>
-      <input type="email" id="email" required>
-      <button type="submit">Kirim Pesanan</button>
-    </form>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Catalyst Team Digital Marketplace</p>
-  </footer>
-
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Catalyst Team Digital Marketplace" />
+    <meta name="twitter:description" content="Toko Hosting 100% Terpercaya " />
+    <meta name="twitter:image" content="https://cloudfast.biz.id/assets/images/logo/1746336164872.png" />
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
   <script>
-    const products = [
-      {
-        name: "SC BOT AUTOORDER V1.3.0",
-        price: 60000,
-        discount: 40000,
-        image: "https://via.placeholder.com/200x120?text=SC+BOT"
-      },
-      {
-        name: "JASA INSTALL PANEL",
-        price: 10000,
-        image: "https://via.placeholder.com/200x120?text=Install+Panel"
-      },
-      {
-        name: "SCRIPT WEBSITE STORE",
-        price: 300000,
-        discount: 201000,
-        image: "https://via.placeholder.com/200x120?text=Store+Script"
-      },
-      {
-        name: "WEBSITE ORDER KUOTA API",
-        price: 40000,
-        discount: 30000,
-        image: "https://via.placeholder.com/200x120?text=Kuota+API"
-      }
-    ];
+    window.dataLayer = window.dataLayer || [];
 
-    const cart = [];
-
-    function addToCart(name, price) {
-      cart.push({ name, price });
-      updateCart();
+    function gtag() {
+      dataLayer.push(arguments);
     }
+    gtag('js', new Date());
 
-    function updateCart() {
-      const cartItems = document.getElementById('cart-items');
-      const cartTotal = document.getElementById('cart-total');
-      cartItems.innerHTML = '';
-      let total = 0;
-
-      cart.forEach(item => {
-        const li = document.createElement('li');
-        li.textContent = `${item.name} - Rp. ${item.price.toLocaleString()}`;
-        cartItems.appendChild(li);
-        total += item.price;
-      });
-
-      cartTotal.textContent = total.toLocaleString();
-    }
-
-    const productList = document.getElementById('product-list');
-    products.forEach(product => {
-      const productDiv = document.createElement('div');
-      productDiv.classList.add('product');
-
-      const priceDisplay = product.discount ? `
-        <p class="discount">Rp. ${product.price.toLocaleString()}</p>
-        <p class="price">Rp. ${product.discount.toLocaleString()}</p>
-      ` : `<p class="price">Rp. ${product.price.toLocaleString()}</p>`;
-
-      productDiv.innerHTML = `
-        <img src="${product.image}" alt="${product.name}">
-        <h3>${product.name}</h3>
-        ${priceDisplay}
-        <button onclick="addToCart('${product.name}', ${product.discount || product.price})">Tambah ke Keranjang</button>
-      `;
-
-      productList.appendChild(productDiv);
-    });
-
-    document.getElementById('order-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert('Pesanan Anda telah dikirim!');
-    });
+    gtag('config', '');
   </script>
 
+    
+  <!-- Facebook Pixel Code -->
+    <script>
+    ! function(f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function() {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = '2.0';
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '');
+    fbq('track', 'PageView');
+  </script>
+  <!-- End Facebook Pixel Code -->
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="https://cloudfast.biz.id/assets/css/fonts.css">
+  <link rel="stylesheet" type="text/css" href="https://cloudfast.biz.id/assets/css/app.css">
+  <link rel="stylesheet" type="text/css" href="https://cloudfast.biz.id/assets/css/app-responsive.css">
+  <link rel="stylesheet" type="text/css" href="https://cloudfast.biz.id/assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="https://cloudfast.biz.id/assets/css/style-responsive.css">
+  <link rel="stylesheet" href="https://cloudfast.biz.id/assets/starrr/dist/starrr.css">
+
+  <link rel="shortcut icon" href="https://cloudfast.biz.id/assets/images/logo/1746336164872.png" type="image/x-icon" />
+
+  <script src="https://kit.fontawesome.com/2baad1d54e.js" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cloudfast.biz.id/assets/icofont/icofont.min.css">
+
+  <script>
+  function changeCategoryProductsActive(id) {
+    // Hapus class item-active dari semua item
+    document.querySelectorAll('.item').forEach(item => {
+      item.classList.remove('item-active');
+    });
+
+    // Tambahkan class item-active ke item yang diklik
+    const selectedItem = document.querySelector('.item-category-menu-' + id);
+    if (selectedItem) {
+      selectedItem.classList.add('item-active');
+    }
+
+    // Tampilkan produk berdasarkan kategori
+    document.querySelectorAll('.product').forEach(product => {
+      if (id === '0' || product.classList.contains('category-' + id)) {
+        product.style.display = 'block';
+      } else {
+        product.style.display = 'none';
+      }
+    });
+  }
+
+  // Jalankan sekali saat halaman dimuat untuk menampilkan semua produk (All)
+  window.onload = function () {
+    changeCategoryProductsActive('0');
+  };
+</script>
+
+  <style>
+  .category-menu {
+    margin-bottom: 20px;
+  }
+
+  .main-category {
+    display: flex;
+    gap: 10px;
+  }
+
+  .item {
+    padding: 10px 20px;
+    background-color: #eee;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .item-active {
+    background-color: #007bff;
+    color: #fff;
+  }
+
+  .product {
+    display: none;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+  }
+</style>
+  
+  <style>
+    .button-bottom-modal-cart-global button {
+      border: 1px solid #000000;
+      color: #000000;
+    }
+
+    .button-bottom-modal-cart-global a button {
+      background-color: #000000    }
+
+    .button-bottom-modal-cart-global a button:hover {
+      border: 1px solid #454545;
+      background-color: #454545;
+    }
+
+    .button-bottom-modal-cart-global button:hover {
+      border: 1px solid #000000;
+      color: #ffffff;
+      background-color: #000000;
+    }
+  </style>
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+  <link rel="stylesheet" href="https://cloudfast.biz.id/assets/select2-4.0.6-rc.1/dist/css/select2.min.css">
+
+  <link rel="stylesheet" href="https://cloudfast.biz.id/assets/css/lightbox.css">
+
+  <title>Catalyst Team Digital Marketplace</title>
+
+</head>
+
+<body>
+
+  
+  <!-- model cart -->
+  <div class="modal fade" id="modalCart" data-backdrop="static" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">Keranjang Belanja</h5>
+          <button onclick="location.reload(true)" type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body" id="modalCartBodyShow">
+                      <div class="alert alert-warning">Keranjang masih kosong, yuk belanja dulu.</div>
+            <div class="button-bottom-modal-cart-global">
+              <button type="button" class="shopping-again" data-dismiss="modal">BELANJA DULU</button>
+            </div>
+                  </div>
+      </div>
+    </div>
+  </div><nav class="navbar-top fixed-top shadow-sm" style="background-color: white;">
+    <div class="main">
+        <a href="https://cloudfast.biz.id/">
+            <img src="https://cloudfast.biz.id/assets/images/logo/1746336128350.png" alt="logo" class="logo">
+        </a>
+        <div class="menu">
+            <a href="https://cloudfast.biz.id/">Home</a>
+                    </div>
+        <a href="#" data-toggle="modal" data-target="#modalCart" class="cart-link">
+                            <img src="https://cloudfast.biz.id/assets/images/icon/shopping-bag.svg" alt="icon bag" class="shopping-bag">
+                    </a>
+    </div>
+    <div class="main-mobile">
+        <a href="https://cloudfast.biz.id/">
+            <img src="https://cloudfast.biz.id/assets/images/logo/1746336128350.png" alt="logo" class="logo">
+        </a>
+        <div>
+            <a href="#" data-toggle="modal" data-target="#modalCart" class="cart-link">
+                                    <img src="https://cloudfast.biz.id/assets/images/icon/shopping-bag.svg" alt="icon bag" class="shopping-bag">
+                            </a>
+            <i class="fa fa-bars"></i>
+        </div>
+    </div>
+</nav>
+<div class="help-heigh-navbar-top"></div>
+<!-- <nav class="navbar-top" style="background-color: ">
+    <div class="main">
+        <a href="https://cloudfast.biz.id/">
+            <img src="https://cloudfast.biz.id/assets/images/logo/1603194662693.png" alt="logo" class="logo">
+        </a>
+        <form action="https://cloudfast.biz.id/search" method="get">
+            <input type="text" placeholder="Cari produk" name="q" autocomplete="off">
+            <i class="icofont-search"></i>
+        </form>
+        <a href="#" data-toggle="modal" data-target="#modalCart" class="cart-link">
+                            <i class="fa fa-shopping-cart cart-icon"></i>
+                    </a>
+    </div>
+    <div class="main-mobile">
+        <i class="fa fa-bars"></i>
+        <a href="https://cloudfast.biz.id/">
+            <img src="https://cloudfast.biz.id/assets/images/logo/1603194662693.png" alt="logo" class="logo">
+        </a>
+        <a href="#" data-toggle="modal" data-target="#modalCart" class="cart-link">
+                            <i class="fa fa-shopping-cart cart-icon"></i>
+                    </a>
+    </div>
+</nav> -->
+<div class="overlay-menu"></div>
+<div class="side-bar-menu-mobile">
+    <div class="menu">
+        <div class="img" style="background-color: ">
+            <img src="https://cloudfast.biz.id/assets/images/logo/1603194662693.png" alt="logo" class="logo">
+        </div>
+        <a href="https://cloudfast.biz.id/">Home</a>
+            </div>
+</div>
+
+<div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-pause="false" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+          <img alt="banner" src="https://cloudfast.biz.id/assets/images/banner/1746383924047.png">
+        </div>  </div>
+</div>
+
+<div class="search-inside-banner">
+  <form action="https://cloudfast.biz.id/search" method="get">
+    <input class="shadow-sm" type="text" placeholder="Cari produk" name="q" autocomplete="off">
+    <i class="icofont-search"></i>
+  </form>
+</div><style>
+  div.category-menu div.main-category div.item:hover {
+    background-color: #000000;
+  }
+
+  div.category-menu div.main-category div.item-active {
+    background-color: #000000;
+  }
+
+  #modalBannerPopup .fa-times {
+    font-size: 20px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    color: white;
+    cursor: pointer;
+  }
+</style>
+
+<div class="category-menu">
+  <div class="main-category">
+    <div class="item item-active item-category-menu-0" onclick="changeCategoryProductsActive('0')">
+      <p class="mb-0">All</p>
+    </div>
+    <div class="item item-category-menu-20" onclick="changeCategoryProductsActive('20')">
+      <p class="mb-0">SCRIPT BOT</p>
+    </div>
+    <div class="item item-category-menu-21" onclick="changeCategoryProductsActive('21')">
+      <p class="mb-0">WEBSITE</p>
+    </div>
+    <div class="item item-category-menu-22" onclick="changeCategoryProductsActive('22')">
+      <p class="mb-0">JASA</p>
+    </div>
+  </div>
+</div>
+
+<div class="products">
+  <div class="product category-20">Produk Script Bot 1</div>
+  <div class="product category-20">Produk Script Bot 2</div>
+  <div class="product category-21">Produk Website 1</div>
+  <div class="product category-22">Produk Jasa 1</div>
+  <div class="product category-21">Produk Website 2</div>
+</div>
+</div>
+
+
+<div class="product-wrapper best-product">
+  <div class="main-product">
+    <div id="bodyForShowProductHome">
+              <a href="https://cloudfast.biz.id/p/sc-bot-autoorder-v1301746287480">
+          <div class="item-product">
+                          <img alt="SC BOT AUTOORDER V1.3.0 " src="https://cloudfast.biz.id/assets/images/product/1746287480844.jpg" class="card-img-top">
+                        <div class="card-body">
+                              <p class="card-text line-3 mb-0">SC BOT AUTOORDER V1.3.0 </p>
+                <p class="newPrice">Rp. 60.000</p>
+                            <div class="stars-rating">
+                                <i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>              </div>
+            </div>
+          </div>
+        </a>
+              <a href="https://cloudfast.biz.id/p/jasa-install-panel1746287102">
+          <div class="item-product">
+                          <img alt="JASA INSTALL PANEL" src="https://cloudfast.biz.id/assets/images/product/1746287102265.png" class="card-img-top">
+                        <div class="card-body">
+                              <p class="card-text line-3 mb-0">JASA INSTALL PANEL</p>
+                <p class="newPrice">Rp. 10.000</p>
+                            <div class="stars-rating">
+                                <i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>              </div>
+            </div>
+          </div>
+        </a>
+              <a href="https://cloudfast.biz.id/p/script-website-store1746286758">
+          <div class="item-product">
+                          <img alt="SCRIPT WEBSITE STORE" src="https://cloudfast.biz.id/assets/images/product/1746286758487.png" class="card-img-top">
+                        <div class="card-body">
+                              <p class="card-text mb-0">SCRIPT WEBSITE STORE</p>
+                <p class="oldPrice mb-0">Rp. <span>300.000</span> <small class="badge badge-danger">33%</small></p>
+                                <p class="newPrice">Rp. 201.000</p>
+                            <div class="stars-rating">
+                                <i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>              </div>
+            </div>
+          </div>
+        </a>
+              <a href="https://cloudfast.biz.id/p/script-bot-auto-order1746286326">
+          <div class="item-product">
+                          <img alt="SCRIPT BOT AUTO ORDER" src="https://cloudfast.biz.id/assets/images/product/1746286325753.png" class="card-img-top">
+                        <div class="card-body">
+                              <p class="card-text mb-0">SCRIPT BOT AUTO ORDER</p>
+                <p class="oldPrice mb-0">Rp. <span>40.000</span> <small class="badge badge-danger">25%</small></p>
+                                <p class="newPrice">Rp. 30.000</p>
+                            <div class="stars-rating">
+                                <i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>              </div>
+            </div>
+          </div>
+        </a>
+              <a href="https://cloudfast.biz.id/p/website-order-kuota-api1746284996">
+          <div class="item-product">
+                          <img alt="WEBSITE ORDER KUOTA API" src="https://cloudfast.biz.id/assets/images/product/1746284996209.png" class="card-img-top">
+                        <div class="card-body">
+                              <p class="card-text mb-0">WEBSITE ORDER KUOTA API</p>
+                <p class="oldPrice mb-0">Rp. <span>40.000</span> <small class="badge badge-danger">25%</small></p>
+                                <p class="newPrice">Rp. 30.000</p>
+                            <div class="stars-rating">
+                                <i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i><i class="far fa-star"></i>              </div>
+            </div>
+          </div>
+        </a>
+          </div>
+    <div class="clearfix"></div>
+  </div>
+  <img src="https://cloudfast.biz.id/assets/images/icon/loading-v1.gif" alt="loading.." class="loading-animation-load-more">
+    <button style="border: 2px solid #000000; color: #000000" class="more" id="btnClickLoadMoreProductHome">LIHAT SEMUA</button>
+</div>
+
+      <input type="hidden" id="numberOfInvoiceTotalHomePage" value="2">
+    <div class="social-proof" id="socialProofId-1">
+      <div class="main">
+                          <img alt="SC BOT AUTOORDER V1.3.0 " src="https://cloudfast.biz.id/assets/images/product/1746287480844.jpg">
+                <div class="text">
+          <p><span class="font-bold">ryza</span> membeli
+          <p class="font-bold product_name">SC BOT AUTOORDER V1.3.0 </p>
+          </p>
+          <span class="verified"><img src="https://cloudfast.biz.id/assets/images/icon/verified.png" alt="verified icon"> Verified by <span class="app_name">Catalyst Team Digital Marketplace</span></span>
+        </div>
+      </div>
+    </div>
+      <input type="hidden" id="numberOfInvoiceTotalHomePage" value="2">
+    <div class="social-proof" id="socialProofId-2">
+      <div class="main">
+                          <img alt="SC BOT AUTOORDER V1.3.0 " src="https://cloudfast.biz.id/assets/images/product/1746287480844.jpg">
+                <div class="text">
+          <p><span class="font-bold">ranz</span> membeli
+          <p class="font-bold product_name">SC BOT AUTOORDER V1.3.0 </p>
+          </p>
+          <span class="verified"><img src="https://cloudfast.biz.id/assets/images/icon/verified.png" alt="verified icon"> Verified by <span class="app_name">Catalyst Team Digital Marketplace</span></span>
+        </div>
+      </div>
+    </div>
+  <footer>
+    <div class="information">
+        <div class="main">
+            <img src="https://cloudfast.biz.id/assets/images/logo/1746336128350.png" alt="logo" class="logo-footer" />
+            <p class="description-store">Toko Hosting 100% Terpercaya </p>
+            <div class="payment_logo" style="text-align: center;">
+                                                                                                                                                                                    <img src="https://cloudfast.biz.id/assets/images/payment/ovo.png" alt="payment" class="logo_payment">
+                                                    <img src="https://cloudfast.biz.id/assets/images/payment/dana.png" alt="payment" class="logo_payment">
+                                                    <img src="https://cloudfast.biz.id/assets/images/payment/gopay.png" alt="payment" class="logo_payment">
+                            </div>
+            <div class="social-media">
+                            </div>
+        </div>
+    </div>
+    <div class="copyright" style="background-color: ">
+        <p class="mb-0">Copyright &copy; <span id="footer-cr-years"></span> Catalyst Team Digital Marketplace</p>
+    </div>
+</footer><script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cloudfast.biz.id/assets/starrr/dist/starrr.js"></script>
+<script src="https://cloudfast.biz.id/assets/select2-4.0.6-rc.1/dist/js/select2.min.js"></script>
+<script src="https://cloudfast.biz.id/assets/js/lightbox.js"></script>
+<script>
+    const modalDelayPopup = "";
+    if (modalDelayPopup) {
+        setTimeout(() => {
+            $("#modalBannerPopup").modal("show");
+        }, modalDelayPopup * 1000);
+    }
+    lightbox.option({
+        'disableScrolling': true
+    })
+    $('.starrr').starrr()
+    $(".starrr").on('starrr:change', function(e, value) {
+        $("input.starrr-rating-star-count").val(value);
+    })
+    const years = new Date().getFullYear();
+    $("#footer-cr-years").text(years);
+
+    $(".btn_order_now_checkout_page").on("click", function() {
+        const pay = $("#paymentSelectCheckoutPage").val();
+        $('#msgPaymentFirstCheckoutPage').hide();
+        if (pay == "") {
+            $('#msgPaymentFirstCheckoutPage').show();
+        }
+    })
+
+    $(".rating .top-rating").on("click", function() {
+        $(".rating .main-rating").slideToggle();
+        $(".rating .top-rating i").toggleClass("arrow-bottom-rating-rotate");
+        $(".rating .top-rating i").css("transition", "0.5s");
+    })
+
+    $("#btnFormHelpPojokKananBawah").on("click", function() {
+        const name = $("#formHelpInputNamePojokKananBawah").val();
+        const message = $("#formHelpTextareaMessagePojokKananBawah").val();
+        const wa = "6285313776434";
+        const msgOpen = "Halo kak";
+        if (name != "" && message != "") {
+            $("#formHelpInputNamePojokKananBawah").val("");
+            $("#formHelpTextareaMessagePojokKananBawah").val("");
+            window.open(`https://wa.me/${wa}?text=${msgOpen}, saya ${name} ingin bertanya %0A ${message}`);
+        }
+    })
+
+    $("button.btn-chat-help-pojok-kanan-bawah").on('click', function() {
+        $("div.box-chat-help-wa").slideToggle('fast');
+        // $("button.btn-chat-help-pojok-kanan-bawah i").removeClass("fa-whatsapp")
+        // $("button.btn-chat-help-pojok-kanan-bawah i").removeClass("fab")
+        // $("button.btn-chat-help-pojok-kanan-bawah i").addClass("fa")
+        // $("button.btn-chat-help-pojok-kanan-bawah i").addClass("fa-times")
+        // $("button.btn-chat-help-pojok-kanan-bawah i").css("font-size", "35px")
+    })
+
+    let numberOfSocialProof = 1;
+    let numberOfInvoiceTotal = parseInt($("#numberOfInvoiceTotalHomePage").val()) * 1000;
+    let pauseOfSocialProof = parseInt('10') * 1000;
+    let timeOfSocialProof = parseInt('5') * 1000;
+
+    function showHideSocialProof() {
+        $(`#socialProofId-${numberOfSocialProof}`).css("bottom", "20px");
+        setTimeout(function() {
+            $(`#socialProofId-${numberOfSocialProof}`).css("bottom", "-100px");
+            numberOfSocialProof++;
+        }, pauseOfSocialProof);
+        if (numberOfSocialProof <= numberOfInvoiceTotal) {
+            setTimeout(showHideSocialProof, pauseOfSocialProof * 2);
+        } else {
+            $(`div.social-proof`).css("bottom", "-100px");
+            numberOfSocialProof = 0;
+            setTimeout(showHideSocialProof, pauseOfSocialProof * 2);
+        }
+    }
+    setTimeout(showHideSocialProof, timeOfSocialProof);
+
+    // detail slick img
+    $('.img-detail-product-slick').slick();
+    $("div.wrapper div.top div.main-top div.img button.slick-prev").html(`<i class="fa fa-angle-left"></i>`);
+    $("div.wrapper div.top div.main-top div.img button.slick-next").html(`<i class="fa fa-angle-right"></i>`);
+
+    let categoryProductsActive;
+    let clickCategoryActive = false;
+    let startLoadProductHome = 9;
+
+    const skeletonLoadingCategory = `
+    <div class="skeleton-item-product">
+        <div class="img"></div>
+    </div>
+    <div class="skeleton-item-product">
+        <div class="img"></div>
+    </div>
+    <div class="skeleton-item-product">
+        <div class="img"></div>
+    </div>
+    `;
+
+    function changeCategoryProductsActive(id) {
+        if (!clickCategoryActive) {
+            clickCategoryActive = true;
+            $("div.category-menu div.main-category div.item").removeClass("item-active");
+            $(`.item-category-menu-${id}`).addClass("item-active");
+            categoryProductsActive = id;
+            $("#bodyForShowProductHome").html(skeletonLoadingCategory);
+            $.ajax({
+                url: `https://cloudfast.biz.id/products/get_all_product_home_by_category/${id}`,
+                method: "get",
+                success: function(response) {
+                    $("#btnClickLoadMoreProductHome").show();
+                    clickCategoryActive = false;
+                    startLoadProductHome = 6;
+                    if (response == "") {
+                        alert("Terjadi kesalahan, refresh browsernya.");
+                    } else {
+                        $("#bodyForShowProductHome").html(response);
+                    }
+                }
+            })
+        }
+    }
+
+    // load more product
+    $("#btnClickLoadMoreProductHome").on("click", function() {
+        $("img.loading-animation-load-more").show();
+        $(this).hide();
+        $.ajax({
+            url: "https://cloudfast.biz.id/products/get_more_product_home?start=" + startLoadProductHome + "&category=" + categoryProductsActive,
+            method: "get",
+            success: function(response) {
+                startLoadProductHome += 6;
+                if (response == "") {
+                    $("#btnClickLoadMoreProductHome").hide();
+                    $("img.loading-animation-load-more").hide();
+                } else {
+                    $("#bodyForShowProductHome").append(response);
+                    $("img.loading-animation-load-more").hide();
+                    $("#btnClickLoadMoreProductHome").show();
+                }
+            }
+        })
+    })
+
+    let startLoadProduct = 8;
+    $("#btnClickLoadMoreProduct").on("click", function() {
+        $("img.loading-animation-load-more").show();
+        $(this).hide();
+        $.ajax({
+            url: "https://cloudfast.biz.id/products/get_more_product?start=" + startLoadProduct,
+            method: "get",
+            success: function(response) {
+                startLoadProduct += 12;
+                if (response == "") {
+                    $("#btnClickLoadMoreProduct").hide();
+                    $("img.loading-animation-load-more").hide();
+                } else {
+                    $("#bodyForShowProduct").append(response);
+                    $("img.loading-animation-load-more").hide();
+                    $("#btnClickLoadMoreProduct").show();
+                }
+            }
+        })
+    })
+
+    let startLoadBestProduct = 12;
+    $("#btnClickLoadMoreBestProduct").on("click", function() {
+        $("img.loading-animation-load-more").show();
+        $(this).hide();
+        $.ajax({
+            url: "https://cloudfast.biz.id/products/get_more_best_product?start=" + startLoadBestProduct,
+            method: "get",
+            success: function(response) {
+                startLoadBestProduct += 12;
+                if (response == "") {
+                    $("#btnClickLoadMoreBestProduct").hide();
+                    $("img.loading-animation-load-more").hide();
+                } else {
+                    $("#bodyForShowProduct").append(response);
+                    $("img.loading-animation-load-more").hide();
+                    $("#btnClickLoadMoreBestProduct").show();
+                }
+            }
+        })
+    })
+
+    let startLoadProductCategory = 12;
+    $("#btnClickLoadMoreProductCategory").on("click", function() {
+        $("img.loading-animation-load-more").show();
+        $(this).hide();
+        $.ajax({
+            url: "https://cloudfast.biz.id/products/get_more_product_category?start=" + startLoadProductCategory + "&idCat=&sort=",
+            method: "get",
+            success: function(response) {
+                startLoadProductCategory += 12;
+                console.log(response);
+                if (response == "") {
+                    $("#btnClickLoadMoreProductCategory").hide();
+                    $("img.loading-animation-load-more").hide();
+                } else {
+                    $("#bodyForShowProductCategory").append(response);
+                    $("img.loading-animation-load-more").hide();
+                    $("#btnClickLoadMoreProductCategory").show();
+                }
+            }
+        })
+    })
+
+    // share product
+    // $(document).click(function() {
+    //     $("div.wrapper div.share-dd").slideUp('fast');
+    // });
+    $("div.wrapper button.share").on('click', function(event) {
+        $("div.wrapper div.share-dd").slideToggle('fast');
+        // event.stopPropagation();
+    })
+
+    // select variant
+    let variantColorProduct = "";
+    let variantSizeProduct = "";
+    $("button.item-option-select-variant-product-color").on('click', function() {
+        $(".item-option-select-variant-product-color").css("background-color", "white");
+        $(".item-option-select-variant-product-color").css("color", "black");
+        $(".item-option-select-variant-product-color").css("border", "1px solid ");
+        $(this).css("background-color", "");
+        $(this).css("color", "white");
+        variantColorProduct = $(this).val();
+    })
+    $("button.item-option-select-variant-product-size").on('click', function() {
+        $(".item-option-select-variant-product-size").css("background-color", "white");
+        $(".item-option-select-variant-product-size").css("color", "black");
+        $(".item-option-select-variant-product-size").css("border", "1px solid ");
+        $(this).css("background-color", "");
+        $(this).css("color", "white");
+        variantSizeProduct = $(this).val();
+        $.ajax({
+            url: "https://cloudfast.biz.id/products/change_price_by_variant",
+            type: "post",
+            dataType: "json",
+            async: true,
+            data: {
+                id: '',
+                variant: variantSizeProduct
+            },
+            success: function(data) {
+                $("div.wrapper div.top div.main-top div.ket h4.price").text(data.price);
+                $("div.wrapper div.top div.main-top div.ket p.oldPrice .linet").text(data.oldPrice);
+            }
+        })
+    })
+
+    // function buy
+    function orderNow() {
+        const productId = '';
+        const slug = '';
+        $.ajax({
+            url: "https://cloudfast.biz.id/cart/add_to_cart",
+            type: "post",
+            data: {
+                id: productId,
+                slug: slug,
+                variant: parseInt(globalVariantType)
+            },
+            success: function(data) {
+                $("#modalCartBodyShow").html(data);
+                $('#modalCart').modal('show');
+            }
+        })
+    }
+
+    // plus minus qty cart
+    function minusProductCart(id) {
+        let inputJml;
+        inputJml = parseInt($(`input#qtyProductCart-${id}`).val());
+        inputJml = inputJml - 1;
+        if (inputJml >= 1) {
+            $(`input#qtyProductCart-${id}`).val("..");
+            $.ajax({
+                url: "https://cloudfast.biz.id/cart/edit_qty_cart?type=minus",
+                type: "post",
+                data: {
+                    rowid: id,
+                },
+                success: function(data) {
+                    $(`#modalCartPriceProduct-${id}`).text(`Rp. ${number_format(data).split(",").join(".")}`);
+                    $(`input#qtyProductCart-${id}`).val(inputJml);
+                }
+            })
+        }
+    }
+
+    function plusProductCart(id) {
+        let inputJml;
+        inputJml = parseInt($(`input#qtyProductCart-${id}`).val());
+        inputJml = inputJml + 1;
+        $(`input#qtyProductCart-${id}`).val("..");
+        $.ajax({
+            url: "https://cloudfast.biz.id/cart/edit_qty_cart?type=plus",
+            type: "post",
+            data: {
+                rowid: id,
+            },
+            success: function(data) {
+                $(`#modalCartPriceProduct-${id}`).text(`Rp. ${number_format(data).split(",").join(".")}`);
+                $(`input#qtyProductCart-${id}`).val(inputJml);
+            }
+        })
+    }
+
+    function deleteCartByRowid(id) {
+        $.ajax({
+            url: "https://cloudfast.biz.id/cart/delete/" + id,
+            type: "get",
+            success: function(data) {
+                $(`#modalCartBodyListItem-${id}`).slideUp('fast');
+            }
+        })
+    }
+
+    function number_format(number, decimals, decPoint, thousandsSep) {
+        number = (number + '').replace(/[^0-9+\-Ee.]/g, '')
+        var n = !isFinite(+number) ? 0 : +number
+        var prec = !isFinite(+decimals) ? 0 : Math.abs(decimals)
+        var sep = (typeof thousandsSep === 'undefined') ? ',' : thousandsSep
+        var dec = (typeof decPoint === 'undefined') ? '.' : decPoint
+        var s = ''
+
+        var toFixedFix = function(n, prec) {
+            var k = Math.pow(10, prec)
+            return '' + (Math.round(n * k) / k)
+                .toFixed(prec)
+        }
+
+        // @todo: for IE parseFloat(0.55).toFixed(0) = 0;
+        s = (prec ? toFixedFix(n, prec) : '' + Math.round(n)).split('.')
+        if (s[0].length > 3) {
+            s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep)
+        }
+        if ((s[1] || '').length < prec) {
+            s[1] = s[1] || ''
+            s[1] += new Array(prec - s[1].length + 1).join('0')
+        }
+
+        return s.join(dec)
+    }
+
+    // select2 checkout
+    $("#districtCheckoutPage").select2({
+        placeholder: 'Pilih Kabupaten/Kota',
+        language: 'id'
+    })
+
+    $("#subdistrictCheckoutPage").select2({
+        placeholder: 'Pilih kabupaten/kota dulu',
+        language: 'id'
+    })
+
+    $("#districtCheckoutPage").on('change', function() {
+        $("#subdistrictCheckoutPage").html(`<option</option>`)
+        $("#subdistrictCheckoutPage").select2({
+            placeholder: 'Loading..',
+            language: 'id'
+        });
+        $("#courierCheckoutPage").html(`
+                <option>Loading..</option>
+            `);
+        $("#ongkirCheckoutPage").text("Rp. 0");
+        const id = $(this).val();
+        $.ajax({
+            url: "https://cloudfast.biz.id/payment/getSubdistrict",
+            type: "post",
+            dataType: "json",
+            async: true,
+            data: {
+                id: id
+            },
+            success: function(data) {
+                $("#subdistrictCheckoutPage").select2({
+                    placeholder: 'Pilih Kecamatan',
+                    language: 'id'
+                })
+                $("#subdistrictCheckoutPage").html(data);
+                $("#courierCheckoutPage").html(`
+                        <option>Pilih kecamatan dulu</option>
+                    `);
+            }
+        });
+    })
+
+    $("#subdistrictCheckoutPage").on('change', function() {
+        $("#courierCheckoutPage").html(`
+                <option>Loading..</option>
+            `);
+
+        $("#ongkirCheckoutPage").text("Rp. 0");
+        const id = $(this).val();
+        $.ajax({
+            url: "https://cloudfast.biz.id/payment/getCourier",
+            type: "post",
+            dataType: "json",
+            async: true,
+            data: {
+                id: id
+            },
+            success: function(data) {
+                $("#courierCheckoutPage").html(`
+                        <option>Pilih Pengiriman</option>
+                    `);
+                $("#courierCheckoutPage").html(data);
+            }
+        });
+    })
+
+    $("#courierCheckoutPage").on("change", function() {
+        let id = $(this).val();
+        id = id.split('-');
+        id = id[0];
+        if (id === "") {
+            id = 0;
+        }
+        const minFee = '';
+        const maxFee = '';
+        if (parseInt(id) >= parseInt(minFee) && parseInt(id) <= parseInt(maxFee)) {
+            $(".logo-payment-checkout-13").show();
+        }
+        $("#ongkirValueOrder").val(id);
+        $("#ongkirCheckoutPage").text("Rp. " + number_format(id).split(",").join("."));
+        const price = "0";
+        const potongan = $("#potonganCouponCheckoutPageValue").val();
+        const total = parseInt(price) + parseInt(id) + parseInt($("#uniqueCodeValueOrder").val()) - parseInt(potongan);
+        $("#totalCheckoutPage").text("Rp. " + number_format(total).split(",").join("."));
+    })
+
+    $("#btnForApplyCouponCheckoutPage").on("click", function() {
+        const coupon = $("#inputCouponCheckoutPage").val();
+        $("#msgDangerCouponWrongCheckoutPage").text("");
+        if (coupon != "") {
+            $.ajax({
+                url: "https://cloudfast.biz.id/checkout/checkoutCoupon",
+                type: "post",
+                dataType: "json",
+                async: true,
+                data: {
+                    coupon: coupon
+                },
+                success: function(data) {
+                    console.log(data);
+                    if (data.success == true) {
+                        $("#potonganCouponCheckoutPageShow").text("Rp. " + number_format(data.discount).split(",").join("."));
+                        $("#potonganCouponCheckoutPageValue").val(data.discount);
+                        const courier = $("#ongkirValueOrder").val();
+                        const price = "0";
+                        const potongan = $("#potonganCouponCheckoutPageValue").val();
+                        const total = parseInt(price) + parseInt(courier) + parseInt($("#uniqueCodeValueOrder").val()) - parseInt(potongan);
+                        $("#totalCheckoutPage").text("Rp. " + number_format(total).split(",").join("."));
+                    } else {
+                        $("#msgDangerCouponWrongCheckoutPage").text(data.msg);
+                    }
+                }
+            });
+        }
+    })
+
+    // select payment
+    function selectPaymentCheckout(id) {
+        $('#msgPaymentFirstCheckoutPage').hide();
+        $("#paymentSelectCheckoutPage").val("true");
+        $(`#paymentLogoSelectCheckoutPageValue`).val(id);
+        $(".logo-payment-checkout-page").css("border", "2px solid #ddd");
+        $(".logo-payment-checkout-page").css("box-shadow", "none");
+        $(`.logo-payment-checkout-${id}`).css("border", "2px solid dodgerblue");
+        $(`.logo-payment-checkout-${id}`).css("box-shadow", "1px 3px 8px rgba(0, 0, 0, 0.2)");
+
+        if (id == "13") {
+            $(".list-for-fee-cod-hide").show();
+            $(".list-for-uniq-code-show-first").hide();
+            const totalharga = '0';
+            const ongkir = $("#ongkirValueOrder").val();
+            const feeCod = '';
+            let totalall = (parseInt(totalharga) + parseInt(ongkir)) * parseInt(feeCod) / 100;
+            $(".valueOfUniqCodeOrFeeCODCheckoutPage").text("Rp. " + number_format(totalall).split(",").join("."));
+            const potongan = $("#potonganCouponCheckoutPageValue").val();
+            const total = parseInt(totalharga) + parseInt(ongkir) + parseInt(totalall) - parseInt(potongan);
+            $("#totalCheckoutPage").text("Rp. " + number_format(total).split(",").join("."));
+        } else {
+            $(".list-for-fee-cod-hide").hide();
+            $(".list-for-uniq-code-show-first").show();
+            const uniqCode = $("#uniqueCodeValueOrder").val();
+            const courier = $("#ongkirValueOrder").val();
+            const price = "0";
+            const potongan = $("#potonganCouponCheckoutPageValue").val();
+            const total = parseInt(price) + parseInt(courier) + parseInt(uniqCode) - parseInt(potongan);
+            $("#totalCheckoutPage").text("Rp. " + number_format(total).split(",").join("."));
+        }
+    }
+
+    // menu sidebar
+    let globalVariableSideBarClose = true;
+    $("nav.navbar-top div.main-mobile .fa-bars").on("click", function() {
+        if (globalVariableSideBarClose) {
+            globalVariableSideBarClose = false;
+            $(".side-bar-menu-mobile").animate({
+                left: "0"
+            }, 300)
+            $(".overlay-menu").animate({
+                left: "0"
+            }, 200)
+        } else {
+            globalVariableSideBarClose = true;
+            $(".side-bar-menu-mobile").animate({
+                left: "-100%"
+            }, 200)
+            $(".overlay-menu").animate({
+                left: "-100%"
+            }, 300)
+        }
+    })
+    $(".overlay-menu").on("click", function() {
+        globalVariableSideBarClose = true;
+        $(".side-bar-menu-mobile").animate({
+            left: "-100%"
+        }, 200)
+        $(".overlay-menu").animate({
+            left: "-100%"
+        }, 300)
+    })
+</script>
 </body>
+
 </html>
