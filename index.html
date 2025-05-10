@@ -89,65 +89,6 @@
 
   <link rel="stylesheet" href="https://cloudfast.biz.id/assets/icofont/icofont.min.css">
 
-  <script>
-  function changeCategoryProductsActive(id) {
-    // Hapus class item-active dari semua item
-    document.querySelectorAll('.item').forEach(item => {
-      item.classList.remove('item-active');
-    });
-
-    // Tambahkan class item-active ke item yang diklik
-    const selectedItem = document.querySelector('.item-category-menu-' + id);
-    if (selectedItem) {
-      selectedItem.classList.add('item-active');
-    }
-
-    // Tampilkan produk berdasarkan kategori
-    document.querySelectorAll('.product').forEach(product => {
-      if (id === '0' || product.classList.contains('category-' + id)) {
-        product.style.display = 'block';
-      } else {
-        product.style.display = 'none';
-      }
-    });
-  }
-
-  // Jalankan sekali saat halaman dimuat untuk menampilkan semua produk (All)
-  window.onload = function () {
-    changeCategoryProductsActive('0');
-  };
-</script>
-
-  <style>
-  .category-menu {
-    margin-bottom: 20px;
-  }
-
-  .main-category {
-    display: flex;
-    gap: 10px;
-  }
-
-  .item {
-    padding: 10px 20px;
-    background-color: #eee;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-
-  .item-active {
-    background-color: #007bff;
-    color: #fff;
-  }
-
-  .product {
-    display: none;
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: #f4f4f4;
-    border-radius: 5px;
-  }
-</style>
   
   <style>
     .button-bottom-modal-cart-global button {
@@ -297,27 +238,17 @@
     <div class="item item-active item-category-menu-0" onclick="changeCategoryProductsActive('0')">
       <p class="mb-0">All</p>
     </div>
-    <div class="item item-category-menu-20" onclick="changeCategoryProductsActive('20')">
-      <p class="mb-0">SCRIPT BOT</p>
-    </div>
-    <div class="item item-category-menu-21" onclick="changeCategoryProductsActive('21')">
-      <p class="mb-0">WEBSITE</p>
-    </div>
-    <div class="item item-category-menu-22" onclick="changeCategoryProductsActive('22')">
-      <p class="mb-0">JASA</p>
-    </div>
-  </div>
+          <div class="item item-category-menu-20" onclick="changeCategoryProductsActive('20')">
+        <p class="mb-0">SCRIPT BOT</p>
+      </div>
+          <div class="item item-category-menu-21" onclick="changeCategoryProductsActive('21')">
+        <p class="mb-0">WEBSITE</p>
+      </div>
+          <div class="item item-category-menu-22" onclick="changeCategoryProductsActive('22')">
+        <p class="mb-0">JASA</p>
+      </div>
+      </div>
 </div>
-
-<div class="products">
-  <div class="product category-20">Produk Script Bot 1</div>
-  <div class="product category-20">Produk Script Bot 2</div>
-  <div class="product category-21">Produk Website 1</div>
-  <div class="product category-22">Produk Jasa 1</div>
-  <div class="product category-21">Produk Website 2</div>
-</div>
-</div>
-
 
 <div class="product-wrapper best-product">
   <div class="main-product">
